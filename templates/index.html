@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Prediction</title>
+</head>
+<body>
+    <h2>Enter Ticket Details</h2>
+    <form action="/predict" method="post">
+        Customer Age: <input type="number" name="customer_age"><br>
+        Customer Gender:
+        <select name="customer_gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select><br>
+        Product Purchased: <input type="text" name="product_purchased"><br>
+        Ticket Priority:
+        <select name="ticket_priority">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+        </select><br>
+        Ticket Type:
+        <select name="ticket_type">
+            <option>Complaint</option>
+            <option>Request</option>
+            <option>Query</option>
+        </select><br>
+        Ticket Channel:
+        <select name="ticket_channel">
+            <option>Email</option>
+            <option>Phone</option>
+            <option>Chat</option>
+        </select><br>
+        First Response Time (hours or text like '2 days'): <input type="text" name="first_response_time"><br>
+        Ticket Subject: <input type="text" name="ticket_subject" required><br>
+        Ticket Description: <textarea name="ticket_description" required></textarea><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
